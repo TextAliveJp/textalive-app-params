@@ -26,5 +26,12 @@
   "devDependencies": {
     "del-cli": "^3.0.1",
     "parcel-bundler": "^1.12.4"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "semantic-ui-react": "^0.88.2",
+    "textalive-api": "^0.13.19",
+    "textalive-react-api": "0.0.4"
   }
 }
