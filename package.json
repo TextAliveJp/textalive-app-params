@@ -1,0 +1,30 @@
+{
+  "name": "textalive-app-params",
+  "private": true,
+  "version": "1.0.0",
+  "description": "TextAlive App Framework でパラメタを利用した例",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel src/index.html --out-dir tmp",
+    "build": "parcel build src/index.html --out-dir docs --public-url /textalive-app-basic",
+    "clean": "del-cli tmp docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TextAliveJp/textalive-app-params.git"
+  },
+  "keywords": [
+    "textalive"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TextAliveJp/textalive-app-params/issues"
+  },
+  "homepage": "https://github.com/TextAliveJp/textalive-app-params#readme",
+  "devDependencies": {
+    "del-cli": "^3.0.1",
+    "parcel-bundler": "^1.12.4"
+  }
+}
