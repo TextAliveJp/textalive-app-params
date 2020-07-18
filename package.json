@@ -17,7 +17,7 @@
   "keywords": [
     "textalive"
   ],
-  "author": "",
+  "author": "Jun Kato <jun.kato@aist.go.jp> (https://junkato.jp)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/TextAliveJp/textalive-app-params/issues"
