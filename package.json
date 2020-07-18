@@ -7,7 +7,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel src/index.html --out-dir tmp",
-    "build": "parcel build src/index.html --out-dir docs --public-url /textalive-app-basic",
+    "build": "parcel build src/index.html --out-dir docs --public-url /textalive-app-params",
     "clean": "del-cli tmp docs"
   },
   "repository": {
