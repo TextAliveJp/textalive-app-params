@@ -6,10 +6,14 @@ import { PlayerControl } from "./PlayerControl";
 const defaultFontSize = 70;
 const defaultColor = "#1f4391";
 
+const sansSerif = `"Hiragino Kaku Gothic Pro", "游ゴシック体", "Yu Gothic", YuGothic, Meiryo, HelveticaNeue, "Helvetica Neue", Helvetica, Arial, sans-serif`;
+const serif = `"Times New Roman", YuMincho, "Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif`;
+
 export const Body = () => {
   const [player, setPlayer] = useState(null);
   const [app, setApp] = useState(null);
   const [char, setChar] = useState("");
+  const [fontFamily, setFontFamily] = useState(sansSerif);
   const [fontSize, setFontSize] = useState(defaultFontSize);
   const [color, setColor] = useState(defaultColor);
   const [darkMode, setDarkMode] = useState(false);
@@ -28,6 +32,16 @@ export const Body = () => {
         appName: "Basic app",
         appAuthor: "Jun Kato",
         parameters: [
+          {
+            title: "フォントの種類",
+            name: "fontFamily",
+            className: "Select",
+            params: [
+              [serif, "明朝体"],
+              [sansSerif, "ゴシック体"],
+            ],
+            initialValue: sansSerif,
+          },
           {
             title: "フォントサイズ",
             name: "fontSize",
@@ -66,6 +80,9 @@ export const Body = () => {
       },
       onAppParameterUpdate: (name, value) => {
         console.log(`[app] parameters.${name} update:`, value);
+        if (name === "fontFamily") {
+          setFontFamily(value);
+        }
         if (name === "fontSize") {
           setFontSize(value);
         }
@@ -121,6 +138,7 @@ export const Body = () => {
         <div
           className="char"
           style={{
+            fontFamily,
             fontSize: `${fontSize}vh`,
             color,
           }}
