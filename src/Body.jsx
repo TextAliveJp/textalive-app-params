@@ -1,5 +1,5 @@
 import React, { useEffect, useState, createRef, useMemo } from "react";
-import { Player } from "textalive-api";
+import { Player } from "textalive-app-api";
 
 import { PlayerControl } from "./PlayerControl";
 
