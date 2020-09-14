@@ -64,7 +64,6 @@ export const Body = () => {
         ],
       },
       mediaElement: ref.current,
-      fontFamilies: [], // don't load fonts
     });
 
     const playerListener = {
