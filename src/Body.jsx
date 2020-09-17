@@ -17,19 +17,19 @@ export const Body = () => {
   const [fontSize, setFontSize] = useState(defaultFontSize);
   const [color, setColor] = useState(defaultColor);
   const [darkMode, setDarkMode] = useState(false);
+  const [mediaElement, setMediaElement] = useState(null);
 
-  const ref = createRef();
-  const mediaElement = useMemo(() => <div className="media" ref={ref} />, []);
+  const div = useMemo(() => <div className="media" ref={setMediaElement} />, []);
 
   useEffect(() => {
-    if (typeof window === "undefined" || !ref.current) {
+    if (typeof window === "undefined" || !mediaElement) {
       return;
     }
 
     console.log("--- [app] create Player instance ---");
     const p = new Player({
       app: {
-        appName: "Basic app",
+        appName: "Params example",
         appAuthor: "Jun Kato",
         parameters: [
           {
@@ -63,7 +63,7 @@ export const Body = () => {
           },
         ],
       },
-      mediaElement: ref.current,
+      mediaElement,
     });
 
     const playerListener = {
@@ -119,7 +119,7 @@ export const Body = () => {
       p.removeListener(playerListener);
       p.dispose();
     };
-  }, [ref.current]);
+  }, [mediaElement]);
 
   return (
     <>
@@ -145,7 +145,7 @@ export const Body = () => {
           {char}
         </div>
       </div>
-      {mediaElement}
+      {div}
     </>
   );
 };
