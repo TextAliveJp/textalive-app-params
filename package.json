@@ -2,13 +2,12 @@
   "name": "textalive-app-params",
   "private": true,
   "version": "1.0.0",
-  "description": "TextAlive App Framework でパラメタを利用した例",
+  "description": "React を使用し、TextAlive ホストがあればフォントや配色などを調整可能な TextAlive App API の作例",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "parcel src/index.html --out-dir tmp",
-    "build": "parcel build src/index.html --out-dir docs --public-url /textalive-app-params",
-    "clean": "del-cli tmp docs"
+    "dev": "parcel src/index.html --out-dir dev",
+    "build": "parcel build src/index.html --public-url ./ --out-dir docs --no-source-maps",
+    "clean": "del-cli .cache dev docs"
   },
   "repository": {
     "type": "git",
@@ -23,16 +22,17 @@
     "url": "https://github.com/TextAliveJp/textalive-app-params/issues"
   },
   "homepage": "https://github.com/TextAliveJp/textalive-app-params#readme",
-  "devDependencies": {
-    "del-cli": "^3.0.1",
-    "parcel-bundler": "^1.12.4"
-  },
   "dependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "semantic-ui-react": "^0.88.2",
     "styled-components": "^5.2.0",
-    "textalive-app-api": "0.0.4",
-    "textalive-react-api": "^0.2.1"
+    "textalive-app-api": "0.1.1",
+    "textalive-react-api": "^0.3.0"
+  },
+  "devDependencies": {
+    "del-cli": "^3.0.1",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-clean-dist": "0.0.6"
   }
 }
