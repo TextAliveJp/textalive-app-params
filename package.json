@@ -27,7 +27,7 @@
     "react-dom": "^16.13.1",
     "semantic-ui-react": "^0.88.2",
     "styled-components": "^5.2.0",
-    "textalive-app-api": "0.1.1",
+    "textalive-app-api": "^0.1.2",
     "textalive-react-api": "^0.3.0"
   },
   "devDependencies": {
