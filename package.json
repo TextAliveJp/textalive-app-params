@@ -3,11 +3,11 @@
   "private": true,
   "version": "1.0.0",
   "description": "React を使用し、TextAlive ホストがあればフォントや配色などを調整可能な TextAlive App API の作例",
-  "main": "index.js",
   "scripts": {
-    "dev": "parcel src/index.html --out-dir dev",
-    "build": "parcel build src/index.html --public-url ./ --out-dir docs --no-source-maps",
-    "clean": "del-cli .cache dev docs"
+    "dev": "parcel src/index.html --dist-dir dev",
+    "build": "parcel build src/index.html --public-url ./ --dist-dir docs --no-source-maps",
+    "clean": "del-cli .parcel-cache dev docs",
+    "prebuild": "del-cli docs"
   },
   "repository": {
     "type": "git",
@@ -27,12 +27,11 @@
     "react-dom": "^16.13.1",
     "semantic-ui-react": "^0.88.2",
     "styled-components": "^5.2.0",
-    "textalive-app-api": "^0.2.0",
+    "textalive-app-api": "^0.3.0",
     "textalive-react-api": "^0.3.1"
   },
   "devDependencies": {
     "del-cli": "^3.0.1",
-    "parcel-bundler": "^1.12.4",
-    "parcel-plugin-clean-dist": "0.0.6"
+    "parcel": "^2.0.0-beta.3.1"
   }
 }

@@ -29,8 +29,8 @@ export const Body = () => {
     console.log("--- [app] create Player instance ---");
     const p = new Player({
       app: {
-        appName: "Params example",
-        appAuthor: "Jun Kato",
+        // トークンは https://developer.textalive.jp/profile で取得したものを使う
+        token: "elLljAkPmCHHiGDP",
         parameters: [
           {
             title: "フォントの種類",
